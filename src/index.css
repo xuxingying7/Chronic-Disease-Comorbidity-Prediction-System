@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #6abff5e9 0%, #2b6174 100%);
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ant-layout {
+  background: transparent !important;
+}
+
+.ant-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  font-weight: 600;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.ant-upload-drag {
+  border: 2px dashed #d9d9d9;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s;
+}
+
+.ant-upload-drag:hover {
+  border-color: #667eea;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.ant-statistic-title {
+  color: #666;
+  font-size: 14px;
+}
+
+.ant-statistic-content {
+  color: #1890ff;
+  font-weight: 600;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 16px 0;
+}
+
+.header-title {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.header-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin-top: 8px;
+}

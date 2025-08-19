@@ -1,0 +1,670 @@
+/* 全局字体设置 */
+* {
+  font-family: "SimSun", "Times New Roman", serif;
+}
+
+/* 英文使用Times New Roman */
+.english-text {
+  font-family: "Times New Roman", serif;
+}
+
+/* 医疗科技风格布局 */
+.medical-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 50%, #0050b3 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 背景动画 */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.floating-shapes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.shape-3 {
+  width: 60px;
+  height: 60px;
+  top: 80%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.shape-4 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  right: 30%;
+  animation-delay: 3s;
+}
+
+.shape-5 {
+  width: 70px;
+  height: 70px;
+  top: 70%;
+  right: 5%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+/* 主内容区域 */
+.main-content {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  min-height: calc(100vh - 80px);
+}
+
+/* 头部样式 */
+.ant-layout-header {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: "SimSun", serif;
+  letter-spacing: 2px;
+}
+
+.nav-menu {
+  background: transparent;
+  border: none;
+  font-family: "SimSun", serif;
+}
+
+.nav-menu .ant-menu-item {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu .ant-menu-item:hover {
+  color: #1890ff;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-menu .ant-menu-item-selected {
+  background: rgba(24, 144, 255, 0.3);
+  color: white;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+/* 内容容器 */
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* 页面标题 */
+.page-title {
+  color: #1890ff;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: "SimSun", serif;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-description {
+  color: #666;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  font-family: "SimSun", serif;
+}
+
+/* 卡片样式 */
+.ant-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(24, 144, 255, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.ant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.ant-card-head {
+  background: linear-gradient(135deg, #1890ff, #096dd9);
+  color: black;
+  border-radius: 12px 12px 0 0;
+  font-family: "SimSun", serif;
+  font-weight: 600;
+}
+
+.ant-card-head-title {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 按钮样式 */
+.ant-btn-primary {
+  background: linear-gradient(135deg, #1890ff, #096dd9);
+  border: none;
+  border-radius: 8px;
+  font-family: "SimSun", serif;
+  font-weight: 500;
+  font-size: 16px;
+  height: 44px;
+  padding: 0 24px;
+  transition: all 0.3s ease;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, #40a9ff, #1890ff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+/* 表单样式 */
+.ant-form-item-label > label {
+  font-family: "SimSun", serif;
+  font-weight: 500;
+  color: #333;
+  font-size: 16px;
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-input-number {
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.ant-input:focus,
+.ant-select-focused .ant-select-selector,
+.ant-input-number-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 表格样式 */
+.ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #1890ff, #096dd9);
+  color: white;
+  font-family: "SimSun", serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(24, 144, 255, 0.05);
+}
+
+/* 图表容器 */
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 上传卡片样式 */
+.upload-card .ant-card-body {
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-dragger {
+  border: 2px dashed #1890ff;
+  border-radius: 12px;
+  background: rgba(24, 144, 255, 0.02);
+  transition: all 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.custom-dragger:hover {
+  border-color: #40a9ff;
+  background: rgba(24, 144, 255, 0.05);
+}
+
+.custom-dragger .ant-upload-drag-icon {
+  margin-bottom: 16px;
+}
+
+.custom-dragger .ant-upload-text {
+  margin-bottom: 8px;
+}
+
+/* 统计卡片样式 */
+.stats-card .ant-card-body {
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-card .ant-statistic-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.stats-card .ant-statistic-content {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* 预览卡片样式 */
+.preview-card .ant-card-body {
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #1890ff, #096dd9);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.custom-table .ant-table-tbody > tr > td {
+  text-align: center;
+  padding: 12px 8px;
+  font-size: 16px;
+}
+
+.custom-table .ant-table-tbody > tr:hover > td {
+  background: rgba(24, 144, 255, 0.05);
+}
+
+/* 数据分析页面样式 */
+.analysis-stats-card {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.analysis-stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.analysis-stats-card .ant-statistic-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.analysis-stats-card .ant-statistic-content {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1890ff;
+}
+
+/* 标签页样式优化 */
+.ant-tabs-tab {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 24px;
+  margin-right: 8px;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.3s ease;
+}
+
+.ant-tabs-tab:hover {
+  color: #1890ff;
+  background: rgba(24, 144, 255, 0.05);
+}
+
+.ant-tabs-tab-active {
+  color: #1890ff;
+  background: rgba(24, 144, 255, 0.1);
+}
+
+.ant-tabs-content-holder {
+  padding: 24px 0;
+}
+
+/* 表格样式优化 */
+.ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #1890ff, #096dd9);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 8px;
+}
+
+.ant-table-tbody > tr > td {
+  text-align: center;
+  padding: 12px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(24, 144, 255, 0.05);
+}
+
+/* 上传区域样式 */
+.upload-area {
+  border: 2px dashed #1890ff;
+  border-radius: 12px;
+  background: rgba(24, 144, 255, 0.02);
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: #40a9ff;
+  background: rgba(24, 144, 255, 0.05);
+}
+
+/* 按钮组样式 */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.action-buttons .ant-btn {
+  flex: 1;
+  height: 40px;
+  font-weight: 500;
+}
+
+/* 预测页面样式 */
+.prediction-form-card {
+  background: white;
+}
+
+.prediction-result-card {
+  background: white;
+}
+
+.prediction-form-card .ant-form-item-label > label {
+  font-weight: 600;
+  color: #1890ff;
+  font-size: 16px;
+}
+
+.prediction-form-card .ant-input,
+.prediction-form-card .ant-select-selector,
+.prediction-form-card .ant-input-number {
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+  height: 40px;
+}
+
+.prediction-form-card .ant-input:focus,
+.prediction-form-card .ant-select-focused .ant-select-selector,
+.prediction-form-card .ant-input-number-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.prediction-form-card .ant-divider-inner-text {
+  font-weight: 600;
+  color: #1890ff;
+  font-size: 18px;
+}
+
+.prediction-form-card .ant-divider-inner-text .anticon {
+  margin-right: 8px;
+  color: #1890ff;
+}
+
+/* 预测按钮样式 */
+.prediction-submit-btn {
+  height: 52px;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1890ff, #096dd9);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.prediction-submit-btn:hover {
+  background: linear-gradient(135deg, #40a9ff, #1890ff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+/* 结果展示样式 */
+.result-progress-circle {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.health-advice-box {
+  background: linear-gradient(135deg, #f6ffed, #f0f9ff);
+  border: 1px solid #b7eb8f;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+}
+
+.confidence-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confidence-progress .ant-progress {
+  flex: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 16px;
+    margin: 16px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .page-description {
+    font-size: 18px;
+  }
+
+  .ant-layout-header {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .upload-card .ant-card-body {
+    padding: 16px;
+  }
+
+  .stats-card .ant-card-body {
+    padding: 16px;
+  }
+
+  .chart-container {
+    padding: 16px;
+  }
+
+  .analysis-stats-card .ant-statistic-content {
+    font-size: 28px;
+  }
+
+  .ant-tabs-tab {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .prediction-form-card .ant-form-item-label > label {
+    font-size: 15px;
+  }
+
+  .prediction-submit-btn {
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .result-progress-circle .ant-progress-circle {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 144, 255, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24, 144, 255, 0.7);
+}
+
+/* 加载动画 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* 警告和提示样式 */
+.ant-alert {
+  border-radius: 8px;
+  font-family: "SimSun", serif;
+}
+
+.ant-message {
+  font-family: "SimSun", serif;
+}
+
+/* 分页样式 */
+.ant-pagination {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.ant-pagination-item {
+  border-radius: 6px;
+  font-family: "SimSun", serif;
+}
+
+.ant-pagination-item-active {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+/* 标签页样式 */
+.ant-tabs-tab {
+  font-family: "SimSun", serif;
+  font-weight: 500;
+}
+
+.ant-tabs-tab-active {
+  color: #1890ff;
+}
+
+.ant-tabs-ink-bar {
+  background: #1890ff;
+}
