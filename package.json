@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "基于机器学习的疾病预测系统",
   "private": true,
+  "homepage": "https://xuxingying7.github.io//Chronic-Disease-Comorbidity-Prediction-System",
   "dependencies": {
     "@ant-design/icons": "^5.0.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -21,6 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,3 +53,4 @@
     "gh-pages": "^6.3.0"
   }
 }
+
